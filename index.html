@@ -3,68 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보처리방침 - [앱 이름 입력]</title>
+    <title>내 앱 이름 - 멋진 한 줄 설명</title>
     <style>
+        /* 기본 스타일 */
         body {
-            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            scroll-behavior: smooth;
         }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        /* 헤더 */
+        header {
+            background: #fff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
         }
-        h1 { color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 10px; }
-        h2 { color: #333; margin-top: 30px; border-left: 4px solid #1a73e8; padding-left: 10px; }
-        p, li { font-size: 15px; }
-        .footer { margin-top: 50px; font-size: 13px; color: #777; text-align: center; }
+
+        .logo { font-weight: bold; font-size: 24px; color: #007AFF; text-decoration: none; }
+        
+        /* 메인 배너 */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: #666; margin-bottom: 30px; }
+
+        /* 버튼 스타일 */
+        .btn {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #0056b3; transform: translateY(-2px); }
+
+        /* 특징 섹션 */
+        .features { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .feature-card i { font-size: 40px; margin-bottom: 15px; display: block; }
+
+        /* 푸터 */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>개인정보처리방침</h1>
-        <p><strong>[앱 이름]</strong>(이하 '앱')은(는) 이용자의 개인정보를 중요시하며, "개인정보보호법" 등 관련 법령을 준수하고 있습니다.</p>
 
-        <h2>1. 개인정보의 수집 및 이용 목적</h2>
-        <p>앱은 다음의 목적을 위해 최소한의 개인정보를 수집하고 이용합니다.</p>
-        <ul>
-            <li>서비스 제공 및 회원 관리</li>
-            <li>일정 관리 기능 제공 및 데이터 동기화</li>
-            <li>고객 문의 응대 및 서비스 개선</li>
-        </ul>
+    <header>
+        <a href="#" class="logo">My App</a>
+        <nav>
+            <a href="#features" style="text-decoration: none; color: #333;">주요 기능</a>
+        </nav>
+    </header>
 
-        <h2>2. 수집하는 개인정보 항목</h2>
-        <p>앱은 서비스 이용 과정에서 다음과 같은 정보를 수집할 수 있습니다.</p>
-        <ul>
-            <li>필수 항목: [예: 이메일 주소, 이름, 프로필 사진]</li>
-            <li>자동 수집 항목: 기기 식별자(UUID), OS 버전, 접속 로그</li>
-        </ul>
+    <section class="hero">
+        <h1>당신의 일상을 바꾸는<br>가장 완벽한 앱</h1>
+        <p>복잡한 작업은 이제 그만. 클릭 한 번으로 모든 것을 해결하세요.</p>
+        <a href="#" class="btn">App Store에서 다운로드</a>
+    </section>
 
-        <h2>3. 개인정보의 보유 및 이용 기간</h2>
-        <p>이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 일정 기간 보관합니다.</p>
-
-        <h2>4. 개인정보의 파기 절차 및 방법</h2>
-        <p>앱은 목적 달성 후 정보를 별도의 DB에 옮겨 일정 기간 저장 후 파기하거나, 전자적 파일 형태의 경우 복구할 수 없는 방법으로 영구 삭제합니다.</p>
-
-        <h2>5. 이용자의 권리와 행사 방법</h2>
-        <p>이용자는 언제든지 자신의 개인정보를 조회하거나 수정할 수 있으며, 회원 탈퇴를 통해 개인정보 이용에 대한 동의를 철회할 수 있습니다.</p>
-
-        <h2>6. 개인정보 보호책임자</h2>
-        <p>서비스 이용 중 발생하는 모든 개인정보 보호 관련 민원은 아래의 연락처로 문의해 주시기 바랍니다.</p>
-        <ul>
-            <li>책임자: [본인 이름 또는 팀 이름]</li>
-            <li>이메일: [본인 이메일 주소]</li>
-        </ul>
-
-        <div class="footer">
-            <p>공고일자: 2025년 [월] [일] / 시행일자: 2025년 [월] [일]</p>
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h3>⚡️ 빠른 속도</h3>
+            <p>최적화된 엔진으로 기다림 없는 사용자 경험을 제공합니다.</p>
         </div>
-    </div>
+        <div class="feature-card">
+            <h3>🎨 심플한 디자인</h3>
+            <p>누구나 직관적으로 사용할 수 있는 깔끔한 UI를 자랑합니다.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔒 안전한 데이터</h3>
+            <p>강력한 보안 기술로 소중한 정보를 안전하게 보호합니다.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My App Team. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px;">개인정보처리방침</a>
+        </div>
+    </footer>
+
 </body>
 </html>
